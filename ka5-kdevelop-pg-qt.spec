@@ -1,25 +1,24 @@
 %define		_state		stable
-%define		kdever		4.8.0
-%define		qtver		4.8.0
+%define		qtver		5.5.1
 %define		orgname		kdevelop-pg-qt
 
 Summary:	The parser-generator from KDevplatform
-Name:		kde4-kdevelop-pg-qt
-Version:	1.0.0
-Release:	1
+Name:		ka5-kdevelop-pg-qt
+Version:	2.0
+Release:	0.1
 License:	GPL
 Group:		X11/Development/Tools
-Source0:	ftp://ftp.kde.org/pub/kde/%{_state}/%{orgname}/%{version}/src/%{orgname}-%{version}.tar.bz2
-# Source0-md5:	155f4e9a3a6d34ebe756c2a16169706f
+Source0:	http://download.kde.org/%{_state}/%{orgname}/%{version}.0/src/%{orgname}-%{version}.tar.xz
+# Source0-md5:	b4574822f45220e241cea19a3f924beb
 URL:		http://www.kdevelop.org/
-BuildRequires:	automoc4
+BuildRequires:	Qt5Core-devel
+BuildRequires:	Qt5Test-devel
 BuildRequires:	bison
 BuildRequires:	cmake >= 2.8.0
 BuildRequires:	flex
-BuildRequires:	kde4-kdelibs-devel >= %{kdever}
-BuildRequires:	qt4-build >= %{qtver}
-BuildRequires:	qt4-qmake >= %{qtver}
+BuildRequires:	kf5-extra-cmake-modules
 BuildRequires:	rpmbuild(macros) >= 1.600
+Obsoletes:	kde4-kdevelop-pg-qt
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
