@@ -4,19 +4,19 @@
 
 Summary:	The parser-generator from KDevplatform
 Name:		ka5-kdevelop-pg-qt
-Version:	2.1.0
-Release:	0.2
+Version:	2.2.1
+Release:	1
 License:	GPL
 Group:		X11/Development/Tools
-Source0:	http://download.kde.org/%{_state}/%{orgname}/%{version}/src/%{orgname}-%{version}.tar.xz
-# Source0-md5:	c35edae258058cd8a75182b7ddf14df0
+Source0:	https://download.kde.org/%{_state}/%{orgname}/%{version}/src/%{orgname}-%{version}.tar.xz
+# Source0-md5:	25c86fcde834decbc138ced67a9d4d17
 URL:		http://www.kdevelop.org/
 BuildRequires:	Qt5Core-devel
 BuildRequires:	Qt5Test-devel
 BuildRequires:	bison
 BuildRequires:	cmake >= 2.8.0
 BuildRequires:	flex
-BuildRequires:	kf5-extra-cmake-modules
+BuildRequires:	kf5-extra-cmake-modules >= 5.14.0
 BuildRequires:	rpmbuild(macros) >= 1.600
 Obsoletes:	kde4-kdevelop-pg-qt
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
